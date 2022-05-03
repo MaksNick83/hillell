@@ -13,6 +13,7 @@ public class AttackRate {
         int luchMin = 35;
         int vershMin = 12;
         int kolMin = 1290; // кількість войнів кожного типу(860*1.5)
+        //Розрахунок загального показника кожної армії
         float zag_Li = (float) kolLi / (voinLi + luchLi + vershLi);
         float zag_Min = (float) kolMin / (voinMin + luchMin + vershMin);
         System.out.printf("Показник атаки династії Лі: = %.4f \n", zag_Li);
