@@ -1,7 +1,5 @@
 package Homework3;
 
-import java.util.Scanner;
-
 public class VolumeBullet {
     public static void main(String[] args) {
         //Задача 1. Порахувати вагу сніговика

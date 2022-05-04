@@ -12,7 +12,7 @@ public class AttackRate {
         int voinMin = 9;
         int luchMin = 35;
         int vershMin = 12;
-        int kolMin = 1290; // кількість войнів кожного типу(860*1.5)
+        int kolMin = (int) (kolLi * 1.5); // кількість войнів кожного типу ,більше в пітора рази
         //Розрахунок загального показника кожної армії
         int zagLi = kolLi * (voinLi + luchLi + vershLi);
         int zagMin = kolMin * (voinMin + luchMin + vershMin);
