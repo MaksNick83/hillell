@@ -14,9 +14,9 @@ public class AttackRate {
         int vershMin = 12;
         int kolMin = 1290; // кількість войнів кожного типу(860*1.5)
         //Розрахунок загального показника кожної армії
-        int zagLi = kolLi * (voinLi+luchLi+vershLi);
-        int zagMin = kolMin * (voinMin+luchMin+vershMin);
-        System.out.println("Показник атаки династії Лі: = "+ zagLi);
-        System.out.println("Показник атаки династії Мінь: = "+ zagMin);
+        int zagLi = kolLi * (voinLi + luchLi + vershLi);
+        int zagMin = kolMin * (voinMin + luchMin + vershMin);
+        System.out.println("Показник атаки династії Лі: = " + zagLi);
+        System.out.println("Показник атаки династії Мінь: = " + zagMin);
     }
 }
