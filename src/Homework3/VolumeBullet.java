@@ -11,7 +11,7 @@ public class VolumeBullet {
         r2 = 0.5F;
         r3 = 0.2F;
         ro = 0.7F;
-        //Розрахуємо Об'ємы кожної кулі 4/3pr3
+        //Розрахуємо Об'ємы кожної кулі 4/3pr^3
         double post = (4.0 / 3) * Math.PI; // постійне значення
         // Маса кулі = Густина * Об'єм
         double result = ro * ((post * Math.pow(r1, 3)) + (post * Math.pow(r2, 3)) + (post * Math.pow(r3, 3)));
