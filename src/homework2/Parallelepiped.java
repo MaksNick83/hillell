@@ -1,4 +1,4 @@
-package Homework2;
+package homework2;
 
 public class Parallelepiped {
     //Створити у новому класі main-метод;
