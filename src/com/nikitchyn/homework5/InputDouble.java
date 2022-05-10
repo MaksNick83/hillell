@@ -1,4 +1,4 @@
-package homework5Nikitchyn;
+package com.nikitchyn.homework5;
 
 import java.util.Scanner;
 

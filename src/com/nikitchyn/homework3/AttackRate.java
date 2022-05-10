@@ -1,4 +1,4 @@
-package homework3;
+package com.nikitchyn.homework3;
 
 public class AttackRate {
     public static void main(String[] args) {

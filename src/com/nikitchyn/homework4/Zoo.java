@@ -1,4 +1,4 @@
-package homework4;
+package com.nikitchyn.homework4;
 
 public class Zoo {
     public static void main(String[] args) {

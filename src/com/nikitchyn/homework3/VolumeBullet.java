@@ -1,4 +1,4 @@
-package homework3;
+package com.nikitchyn.homework3;
 
 public class VolumeBullet {
     public static void main(String[] args) {

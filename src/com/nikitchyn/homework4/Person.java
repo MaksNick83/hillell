@@ -1,4 +1,4 @@
-package homework4;
+package com.nikitchyn.homework4;
 
 public class Person {
     public static void main(String[] args) {
