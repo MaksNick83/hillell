@@ -3,7 +3,7 @@ package homework4;
 public class RecursionZoo {
     public static void main(String[] args) {
 
-        int a = increaseCountAnimalIncrease(10, 30, 10);
+        int a = increaseCountAnimalIncrease(20, 80, 3);
         System.out.println("Кількість ведмедів через 10 років " + a);
 
     }
