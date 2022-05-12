@@ -7,8 +7,8 @@ public class ShatlNum {
     public static void main(String[] args) {
         char a, b;
         int n;
-        a = '4';   //нещастливе число
-        b = '9';   //нещастливе число
+        a = '4';   //нещасливе число
+        b = '9';   //нещасливе число
         n = 100;   //кількість шатлів
         numShatl(a, b, n);
 
