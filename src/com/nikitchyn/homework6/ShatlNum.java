@@ -28,7 +28,7 @@ public class ShatlNum {
         String s3;
         do {
             s3 = Integer.toString(i);//конвертуємо в стрічку
-            if (s3.indexOf('4') == -1 && s3.indexOf('9') == -1) { //не знайшли цифри з параметрів
+            if (s3.indexOf(a) == -1 && s3.indexOf(b) == -1) { //не знайшли цифри з параметрів
                 System.out.println("Шатл " + (k + 1) + " №" + i);
                 k++;
             }
