@@ -17,7 +17,7 @@ public class MinMaxArray {
                 // Заповнити масив рандомними елементами від -20 до 20
                 int a = scanner.nextInt();
                 if (a > 0) {
-                    int arrayDig[] = new int[a];
+                    int[] arrayDig = new int[a];
                     for (int i = 0; i < a; i++) {
                         arrayDig[i] = randomValue(minValue, maxValue);
                         System.out.print(arrayDig[i] + (i == arrayDig.length - 1 ? "" : ","));
@@ -60,8 +60,7 @@ public class MinMaxArray {
     private static int minInArray(int[] arrayDig) {
         int min = arrayDig[0];
         for (int i : arrayDig) {
-            if (i < min)
-                min = i;
+            if (i < min) min = i;
         }
         return min;
     }
@@ -74,8 +73,7 @@ public class MinMaxArray {
     private static int maxInArray(int[] arrayDig) {
         int max = arrayDig[0];
         for (int i : arrayDig) {
-            if (i > max)
-                max = i;
+            if (i > max) max = i;
         }
         return max;
     }
