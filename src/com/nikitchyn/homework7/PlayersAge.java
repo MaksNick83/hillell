@@ -6,8 +6,8 @@ public class PlayersAge {
         int[] commandOne = new int[countPlayer];
         int[] commandTwo = new int[countPlayer];
         double sumYearCommand1 = 0, sumYearCommand2 = 0;
-
-        String playersOneCommand = "", playersTwoCommand = "";
+        String playersOneCommand = "";
+        String playersTwoCommand = "";
         for (int i = 0; i < countPlayer; i++) {
             //генеруємо вік
             commandOne[i] = randomValue(minYear, maxYear);
@@ -21,7 +21,6 @@ public class PlayersAge {
         }
         double avCom1 = sumYearCommand1 / countPlayer;
         double avCom2 = sumYearCommand2 / countPlayer;
-
         System.out.println("Вік гравців першої команди: " + playersOneCommand);
         System.out.printf("Середній вік гравців першої команды: %.2f \n", avCom1);
         System.out.println("Вік гравців другої команди: " + playersTwoCommand);
