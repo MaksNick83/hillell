@@ -1,5 +1,7 @@
 package com.nikitchyn.homework7;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MinMaxArray {
@@ -20,9 +22,8 @@ public class MinMaxArray {
                     int[] arrayDig = new int[a];
                     for (int i = 0; i < a; i++) {
                         arrayDig[i] = randomValue(minValue, maxValue);
-                        System.out.print(arrayDig[i] + (i == arrayDig.length - 1 ? "" : ","));
                     }
-                    System.out.println();
+                    System.out.println(Arrays.toString(arrayDig));
                     //Створіть метод для знаходження максимального елемента.
                     System.out.println("Максимальне значення: " + maxInArray(arrayDig));
                     //Створіть метод для знаходження мінімального елемента.
