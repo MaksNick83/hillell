@@ -28,6 +28,7 @@ public class TransportMatrix {
         //Транспонуємо матрицю
         transportMatrix(matrixA, matrixB);
         //Показуємо результат
+        System.out.println("----------------------------");
         showMatrix(matrixB);
     }
 
