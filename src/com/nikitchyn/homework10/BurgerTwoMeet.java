@@ -9,7 +9,7 @@ public class BurgerTwoMeet extends Burger {
 
 
     protected BurgerTwoMeet() {// По змовченню не створюємо
-        return;
+       // return;
     }
 
     public String getName() {

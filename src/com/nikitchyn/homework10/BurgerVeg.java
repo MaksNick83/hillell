@@ -9,7 +9,7 @@ public class BurgerVeg extends Burger {
 
 
     protected BurgerVeg() {// По змовченню не створюємо
-        return;
+        //return;
     }
 
     public String getName() {

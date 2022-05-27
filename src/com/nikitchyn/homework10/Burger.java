@@ -12,7 +12,7 @@ public class Burger {
     private int mayonnaise;
 
     protected Burger() {// По змовченню не створюємо
-        return;
+   //     return;
     }
 
     //Зробити три конструктори, які дозволятимуть робити бургери трьох видів
