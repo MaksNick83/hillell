@@ -1,7 +1,7 @@
 package com.nikitchyn.homework11;
 
 public class AccountClient {
-    //не змінівані
+    //не змінювані
     private final String name;
     private final int dayBirthday;
     private final int monthBirthday;
