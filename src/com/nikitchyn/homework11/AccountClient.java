@@ -18,6 +18,10 @@ public class AccountClient {
     private boolean isChanged;
     private static final int YEARTODAY = 2022; // константа
 
+    {
+        this.isChanged = true;//всі створені змінені
+    }
+
     public AccountClient(String name, int dayBirthday, int monthBirthday, int yearBirthday, String mail, String telephone, String surname, int weight, String pressure, int countSteps) {
         this.name = name;
         this.dayBirthday = dayBirthday;
@@ -29,7 +33,7 @@ public class AccountClient {
         this.weight = weight;
         this.pressure = pressure;
         this.countSteps = countSteps;
-        this.isChanged = true; //всі створені змінені
+
     }
 
     public int getAge() {
