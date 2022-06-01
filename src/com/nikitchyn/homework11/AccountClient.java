@@ -16,7 +16,7 @@ public class AccountClient {
     //Отсебятіна)) добавив це поле щоб відслідкувати тільки ті объєкти котрі змінили моїми сетерами
     //Хеш памятаю, можна було б піти через масиви, зберігати хеш до і після потім порівнювати
     private boolean isChanged;
-    private static final int YEARTODAY = 2022; // константа
+    private static final int YEAR_TODAY = 2022; // константа
 
     {
         this.isChanged = true;//всі створені змінені
