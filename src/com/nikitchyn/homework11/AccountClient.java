@@ -37,7 +37,7 @@ public class AccountClient {
     }
 
     public int getAge() {
-        return YEARTODAY - yearBirthday; //зміна age
+        return YEAR_TODAY - yearBirthday; //зміна age
     }
 
     public boolean isChanged() {
