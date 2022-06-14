@@ -77,7 +77,7 @@ public class CalculatorTest {
         Assert.assertEquals(-2.0, actual, 0.0);
     }
 
-    //****************Тести віднімання **************************//
+    //****************Тести додавання **************************//
     @Test
     public void testCalculateAdd() {//Додавання позитивних
         Double actual = calculator.calculate(2, "+", 2);
@@ -90,7 +90,7 @@ public class CalculatorTest {
         Assert.assertEquals(-4.0, actual, 0.0);
     }
 
-    //****************Тести віднімання **************************//
+    //****************Тести перевірки операції **************************//
     @Test
     public void testCalculateOperationSupported() {  // Перевірити чи операція підтримується.
         Double actual = calculator.calculate(4, "/+", 2);
