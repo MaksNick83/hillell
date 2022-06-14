@@ -1,4 +1,4 @@
-package com.nikitchyn.homework15;
+package com.nikitchyn.homework14;
 
 public enum Operation {
     ADD("+"),

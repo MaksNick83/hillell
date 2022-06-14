@@ -1,4 +1,4 @@
-package com.nikitchyn.homework15;
+package com.nikitchyn.homework14;
 
 public class Calculator {
     public Double calculate(double a, String operation, double b) {
