@@ -20,3 +20,15 @@ jobs:
    
     - name: Step 3- Build project with Maven
       run: mvn -B package --file pom.xml
+  - name: Step 4 - Log coverage percentage
+      run: |
+        echo "coverage = ${{ steps.jacoco.outputs.coverage }}"
+        echo "branch coverage = ${{ steps.jacoco.outputs.branches }}"
+      - name: Step 5 - Upload JaCoCo coverage report
+        uses: actions/upload-artifact@v2
+        with:
+          name: jacoco-report
+          path: target/site/jacoco/
+
+      - name: Step 6 - List the current directory
+        run: cd target && ls -la

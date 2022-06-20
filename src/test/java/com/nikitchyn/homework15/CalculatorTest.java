@@ -1,4 +1,4 @@
-package com.nikitchyn.homework14;
+package com.nikitchyn.homework15;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -33,13 +33,13 @@ public class CalculatorTest {
         Assert.assertEquals(-2.0, actual, 0.0);
     }
 
-    @Test
+    @Test(expected = ArithmeticException.class)
     public void testCalculateDivByZeroWhenMemberAreNegative() {// ділення на 0 негативних
         Double actual = calculator.calculate(-4, "/", 0);
         Assert.assertEquals(0.0, actual, 0.0);
     }
 
-    @Test
+    @Test(expected = ArithmeticException.class)
     public void testCalculateDivByZeroWhenMemberArePlus() {// ділення на 0 позитивних
         Double actual = calculator.calculate(4, "/", 0);
         Assert.assertEquals(0.0, actual, 0.0);
@@ -92,12 +92,58 @@ public class CalculatorTest {
     }
 
     //****************Тести перевірки операції **************************//
-    @Test
+    @Test(expected = UnsupportedOperationException.class)
     public void testCalculateOperationSupported() {  // Перевірити чи операція підтримується.
         Double actual = calculator.calculate(4, "/+", 2);
         Assert.assertEquals(-1.0, actual, 0.0);
 
     }
 
+    //Допишіть тести на новий метод
+    @Test
+    public void testCalculateStringArgAdd() {//Додавання негативних
+        Double actual = calculator.calculate("-2", "+", "-2");
+        Assert.assertEquals(-4.0, actual, 0.0);
+    }
+
+    @Test
+
+    public void testCalculateStringArgSub() {//віднімання позитивних
+        Double actual = calculator.calculate("4", "-", "2");
+        Assert.assertEquals(2.0, actual, 0.0);
+    }
+
+    @Test
+    public void testCalculateStringArgMulti() {//множення позитивних
+        Double actual = calculator.calculate("4", "*", "2");
+        Assert.assertEquals(8.0, actual, 0.0);
+    }
+
+    @Test
+    public void testCalculateStringArgDiv() { // ділення позитивних
+        Double actual = calculator.calculate("4", "/", "2");
+        Assert.assertEquals(2.0, actual, 0.0);
+    }
+
+    @Test(expected = UnsupportedOperationException.class)
+    public void testCalculateStringArgOperationSupported() {  // Перевірити чи операція підтримується.
+        Double actual = calculator.calculate("4", "/+", "2");
+        Assert.assertEquals(-1.0, actual, 0.0);
+
+    }
+
+    @Test(expected = CalculatorException.class)
+    public void testCalculateStringArgOneIsDigits() {  // Проверка a на число
+        Double actual = calculator.calculate("l", "/+", "2");
+        Assert.assertEquals(-1.0, actual, 0.0);
+
+    }
+
+    @Test(expected = CalculatorException.class)
+    public void testCalculateStringArgTwoIsDigits() {  // Проверка b на число
+        Double actual = calculator.calculate("2", "/+", "L");
+        Assert.assertEquals(-1.0, actual, 0.0);
+
+    }
 
 }
