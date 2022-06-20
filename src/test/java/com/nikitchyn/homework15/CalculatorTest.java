@@ -124,6 +124,11 @@ public class CalculatorTest {
         Double actual = calculator.calculate("4", "/", "2");
         Assert.assertEquals(2.0, actual, 0.0);
     }
+    @Test(expected = ArithmeticException.class)
+    public void testCalculateStringArgDivByZero() { // ділення на 0
+        Double actual = calculator.calculate("4", "/", "0");
+        Assert.assertEquals(2.0, actual, 0.0);
+    }
 
     @Test(expected = UnsupportedOperationException.class)
     public void testCalculateStringArgOperationSupported() {  // Перевірити чи операція підтримується.
