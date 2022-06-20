@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Lottery.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">hillel_calculator</a> &gt; <a href="index.source.html" class="el_package">com.nikitchyn.homework8</a> &gt; <span class="el_source">Lottery.java</span></div><h1>Lottery.java</h1><pre class="source lang-java linenums">package com.nikitchyn.homework8;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+<span class="nc" id="L6">public class Lottery {</span>
+    public static void main(String[] args) {
+<span class="nc" id="L8">        int countElement = 7, min = 0, max = 9;</span>
+
+<span class="nc" id="L10">        lotteryResult(countElement, min, max);</span>
+
+<span class="nc" id="L12">    }</span>
+
+    private static void lotteryResult(int countElement, int min, int max) {
+<span class="nc" id="L15">        int[] first = getRandomMas(countElement, min, max);//згенерований масив</span>
+<span class="nc" id="L16">        int[] second = getInputMasUser(countElement);      // масив заповнений користувачем</span>
+<span class="nc" id="L17">        Arrays.sort(first); //сортування</span>
+<span class="nc" id="L18">        Arrays.sort(second);//сортування</span>
+<span class="nc" id="L19">        outResultLottery(first, second); //вивід результату порівння двох масивів</span>
+<span class="nc" id="L20">    }</span>
+
+
+    /**
+     * порівнює два масиви,виводить користувачу індекс+1 співпавших елементів
+     *
+     * @param first  масив1
+     * @param second масив2
+     */
+    private static void outResultLottery(int[] first, int[] second) {
+<span class="nc" id="L30">        System.out.println(Arrays.toString(first));</span>
+<span class="nc" id="L31">        System.out.println(Arrays.toString(second));</span>
+<span class="nc" id="L32">        int count = 0;</span>
+<span class="nc bnc" id="L33" title="All 2 branches missed.">        for (int i = 0; i &lt; first.length; i++) {</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">            if (first[i] == second[i]) {</span>
+<span class="nc" id="L35">                System.out.println(&quot;Співпав елемент &quot; + first[i] + &quot; під номером &quot; + i );</span>
+<span class="nc" id="L36">                count++;</span>
+            }
+        }
+<span class="nc" id="L39">        System.out.println();</span>
+<span class="nc" id="L40">        System.out.println(&quot;К-ть співпадінь:&quot; + count);</span>
+
+<span class="nc" id="L42">    }</span>
+
+    /**
+     * повертає масив  заповнений int користувачем вказаною кылькістью елементів
+     *
+     * @param countElement кількість елементів
+     */
+    private static int[] getInputMasUser(int countElement) {
+<span class="nc" id="L50">        int[] second = new int[countElement];</span>
+<span class="nc" id="L51">        int k = 0;</span>
+        int a ;
+<span class="nc bnc" id="L53" title="All 2 branches missed.">        while (k != countElement) {</span>
+<span class="nc" id="L54">            Scanner scanner = new Scanner(System.in);</span>
+<span class="nc" id="L55">            System.out.print(&quot;Введіть ціле число,&gt;0: &quot;);</span>
+
+<span class="nc bnc" id="L57" title="All 2 branches missed.">            if (scanner.hasNextInt()) {</span>
+<span class="nc" id="L58">                a = scanner.nextInt();</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">                if (a &gt; 0) {</span>
+<span class="nc" id="L60">                    second[k] = a;</span>
+<span class="nc" id="L61">                    k++;</span>
+                } else {
+<span class="nc" id="L63">                    System.out.println(&quot;Не відповідає вимогам.Повторіть&quot;);</span>
+                }
+
+            } else {
+<span class="nc" id="L67">                System.out.println(&quot;Не відповідає вимогам.Повторіть&quot;);</span>
+            }
+<span class="nc" id="L69">        }</span>
+<span class="nc" id="L70">        return second;</span>
+
+    }
+
+
+    private static int[] getRandomMas(int countElement, int min, int max) {
+<span class="nc" id="L76">        int[] first = new int[countElement];</span>
+<span class="nc bnc" id="L77" title="All 2 branches missed.">        for (int i = 0; i &lt; countElement; i++) {</span>
+<span class="nc" id="L78">            first[i] = randomValue(min, max);</span>
+        }
+
+<span class="nc" id="L81">        return first;</span>
+
+
+    }
+
+    /**
+     * Повертає випадкове ціле число в заданому діапазоні
+     *
+     * @param minCount Від
+     * @param maxCount До
+     */
+    private static int randomValue(int minCount, int maxCount) {
+
+<span class="nc" id="L94">        return minCount + (int) (Math.random() * ((maxCount - minCount) + 1));</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

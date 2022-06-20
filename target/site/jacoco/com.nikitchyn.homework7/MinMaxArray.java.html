@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MinMaxArray.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">hillel_calculator</a> &gt; <a href="index.source.html" class="el_package">com.nikitchyn.homework7</a> &gt; <span class="el_source">MinMaxArray.java</span></div><h1>MinMaxArray.java</h1><pre class="source lang-java linenums">package com.nikitchyn.homework7;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Scanner;
+
+<span class="nc" id="L7">public class MinMaxArray {</span>
+    public static void main(String[] args) {
+        int minValue, maxValue;
+        //Діапазон рандом
+<span class="nc" id="L11">        minValue = -20;</span>
+<span class="nc" id="L12">        maxValue = 20;</span>
+<span class="nc" id="L13">        boolean outCycle = false;</span>
+        do {
+            //З допомогою введення через термінул. Задайте довжину масиву, щоб потім його створити.
+<span class="nc" id="L16">            Scanner scanner = new Scanner(System.in);</span>
+<span class="nc" id="L17">            System.out.print(&quot;Введіть розмірність масиву(ціле число) ,більше 0: &quot;);</span>
+<span class="nc bnc" id="L18" title="All 2 branches missed.">            if (scanner.hasNextInt()) {</span>
+                // Заповнити масив рандомними елементами від -20 до 20
+<span class="nc" id="L20">                int a = scanner.nextInt();</span>
+<span class="nc bnc" id="L21" title="All 2 branches missed.">                if (a &gt; 0) {</span>
+<span class="nc" id="L22">                    int[] arrayDig = new int[a];</span>
+<span class="nc bnc" id="L23" title="All 2 branches missed.">                    for (int i = 0; i &lt; a; i++) {</span>
+<span class="nc" id="L24">                        arrayDig[i] = randomValue(minValue, maxValue);</span>
+                    }
+<span class="nc" id="L26">                    System.out.println(Arrays.toString(arrayDig));</span>
+                    //Створіть метод для знаходження максимального елемента.
+<span class="nc" id="L28">                    System.out.println(&quot;Максимальне значення: &quot; + maxInArray(arrayDig));</span>
+                    //Створіть метод для знаходження мінімального елемента.
+<span class="nc" id="L30">                    System.out.println(&quot;Мінімальне значення: &quot; + minInArray(arrayDig));</span>
+                    //Створіть метод для знаходження середнього значення.
+<span class="nc" id="L32">                    System.out.printf(&quot;Середнє значення:  %.2f \n&quot;, averageInArray(arrayDig));</span>
+<span class="nc" id="L33">                    outCycle = true;</span>
+<span class="nc" id="L34">                } else {</span>
+<span class="nc" id="L35">                    System.out.println(&quot;Введене значення менше нуля&quot;);</span>
+                }
+<span class="nc" id="L37">            } else {</span>
+<span class="nc" id="L38">                System.out.println(&quot;Ви не ввели ціле число&quot;);</span>
+            }
+<span class="nc bnc" id="L40" title="All 2 branches missed.">        } while (!outCycle);</span>
+<span class="nc" id="L41">    }</span>
+
+    /**
+     * Повертає середнє значення в масиві
+     *
+     * @param arrayDig Массив
+     */
+    private static double averageInArray(int[] arrayDig) {
+<span class="nc" id="L49">        double average = 0;</span>
+<span class="nc bnc" id="L50" title="All 2 branches missed.">        for (int i : arrayDig) {</span>
+<span class="nc" id="L51">            average += i;</span>
+        }
+<span class="nc" id="L53">        return average / arrayDig.length;</span>
+    }
+
+    /**
+     * Повертає мінімальне значення в масиві
+     *
+     * @param arrayDig Массив
+     */
+    private static int minInArray(int[] arrayDig) {
+<span class="nc" id="L62">        int min = arrayDig[0];</span>
+<span class="nc bnc" id="L63" title="All 2 branches missed.">        for (int i : arrayDig) {</span>
+<span class="nc bnc" id="L64" title="All 2 branches missed.">            if (i &lt; min) min = i;</span>
+        }
+<span class="nc" id="L66">        return min;</span>
+    }
+
+    /**
+     * Повертає максимальне значення в масиві
+     *
+     * @param arrayDig Массив
+     */
+    private static int maxInArray(int[] arrayDig) {
+<span class="nc" id="L75">        int max = arrayDig[0];</span>
+<span class="nc bnc" id="L76" title="All 2 branches missed.">        for (int i : arrayDig) {</span>
+<span class="nc bnc" id="L77" title="All 2 branches missed.">            if (i &gt; max) max = i;</span>
+        }
+<span class="nc" id="L79">        return max;</span>
+    }
+
+    /**
+     * Повертає випадкове ціле число в заданому діапазоні
+     *
+     * @param minCount Від
+     * @param maxCount До
+     */
+    private static int randomValue(int minCount, int maxCount) {
+
+<span class="nc" id="L90">        return minCount + (int) (Math.random() * ((maxCount - minCount) + 1));</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

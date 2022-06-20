@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MethodFibonacci.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">hillel_calculator</a> &gt; <a href="index.source.html" class="el_package">com.nikitchyn.homework6</a> &gt; <span class="el_source">MethodFibonacci.java</span></div><h1>MethodFibonacci.java</h1><pre class="source lang-java linenums">package com.nikitchyn.homework6;
+
+<span class="nc" id="L3">public class MethodFibonacci {</span>
+    public static void main(String[] args) {
+        //перший та другий член рівний 1.
+        //Наступний член це сума двох попередніх.Опишимо в циклі for
+<span class="nc" id="L7">        int k0 = 1;</span>
+<span class="nc" id="L8">        int k1 = 1;</span>
+        int k2;
+<span class="nc" id="L10">        System.out.println(&quot;Член 1: &quot; + k0);</span>
+<span class="nc" id="L11">        System.out.println(&quot;Член 2: &quot; + k1);</span>
+<span class="nc bnc" id="L12" title="All 2 branches missed.">        for (int i = 3; i &lt;= 11; i++) {</span>
+<span class="nc" id="L13">            k2 = k0 + k1;</span>
+<span class="nc" id="L14">            System.out.println(&quot;Член &quot; + i + &quot;: &quot; + k2);</span>
+<span class="nc" id="L15">            k0 = k1;</span>
+<span class="nc" id="L16">            k1 = k2;</span>
+        }
+<span class="nc" id="L18">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

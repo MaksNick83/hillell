@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Drinks.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">hillel_calculator</a> &gt; <a href="index.source.html" class="el_package">com.nikitchyn.homework12</a> &gt; <span class="el_source">Drinks.java</span></div><h1>Drinks.java</h1><pre class="source lang-java linenums">package com.nikitchyn.homework12;
+
+<span class="nc" id="L3">public class Drinks {</span>
+
+    // Зробіть клас Drinks, де константами задайте ціну напою;
+    private static final float COFFEE_PRICE = 2;
+    private static final float TEA_PRICE = 5;
+    private static final float LEMONADE_PRICE = 3;
+    private static final float MOKHITO_PRICE = 4;
+    private static final float MINERALK_PRICE = 1;
+    private static final float COCA_COLA_PRICE = 3;
+    //Зробіть підрахунок кількості зроблених напоїв
+    // та загальної суми, яку повинен заплатити клієнт;
+<span class="nc" id="L14">    private static float allPrice = 0;</span>
+<span class="nc" id="L15">    private static int allCount = 0;</span>
+
+    public void makeCofee(int count) {
+<span class="nc" id="L18">        System.out.printf(&quot;Coffee: %s X %s = %.2f \n&quot;, count, COFFEE_PRICE, (count * COFFEE_PRICE));</span>
+<span class="nc" id="L19">        allPrice = allPrice + (count * COFFEE_PRICE);</span>
+<span class="nc" id="L20">        allCount = allCount + count;</span>
+<span class="nc" id="L21">    }</span>
+
+    public void makeTea(int count) {
+<span class="nc" id="L24">        System.out.printf(&quot;Tea: %s X %s = %.2f \n&quot;, count, TEA_PRICE, (count * TEA_PRICE));</span>
+<span class="nc" id="L25">        allPrice = allPrice + (count * TEA_PRICE);</span>
+<span class="nc" id="L26">        allCount = allCount + count;</span>
+<span class="nc" id="L27">    }</span>
+
+    public void makeLemnonade(int count) {
+<span class="nc" id="L30">        System.out.printf(&quot;Lemonade: %s X %s = %.2f \n&quot;, count, LEMONADE_PRICE, (count * LEMONADE_PRICE));</span>
+<span class="nc" id="L31">        allPrice = allPrice + (count * LEMONADE_PRICE);</span>
+<span class="nc" id="L32">        allCount = allCount + count;</span>
+<span class="nc" id="L33">    }</span>
+
+    public void makeMokhito(int count) {
+<span class="nc" id="L36">        System.out.printf(&quot;Mokhito: %s X %s = %.2f \n&quot;, count, MOKHITO_PRICE, (count * MOKHITO_PRICE));</span>
+<span class="nc" id="L37">        allPrice = allPrice + (count * MOKHITO_PRICE);</span>
+<span class="nc" id="L38">        allCount = allCount + count;</span>
+<span class="nc" id="L39">    }</span>
+
+    public void makeMineralk(int count) {
+<span class="nc" id="L42">        System.out.printf(&quot;Mineralk: %s X %s = %.2f \n&quot;, count, MINERALK_PRICE, (count * MINERALK_PRICE));</span>
+<span class="nc" id="L43">        allPrice = allPrice + (count * MINERALK_PRICE);</span>
+<span class="nc" id="L44">        allCount = allCount + count;</span>
+<span class="nc" id="L45">    }</span>
+
+    public void makeCola(int count) {
+<span class="nc" id="L48">        System.out.printf(&quot;Mineralk: %s X %s = %.2f \n&quot;, count, COCA_COLA_PRICE, (count * COCA_COLA_PRICE));</span>
+<span class="nc" id="L49">        allPrice = allPrice + (count * COCA_COLA_PRICE);</span>
+<span class="nc" id="L50">        allCount = allCount + count;</span>
+<span class="nc" id="L51">    }</span>
+
+    public float getAllPrice() {
+<span class="nc" id="L54">        return allPrice;</span>
+    }
+
+    public int getAllCount() {
+<span class="nc" id="L58">        return allCount;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

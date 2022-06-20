@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>VolumeBullet.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">hillel_calculator</a> &gt; <a href="index.source.html" class="el_package">com.nikitchyn.homework3</a> &gt; <span class="el_source">VolumeBullet.java</span></div><h1>VolumeBullet.java</h1><pre class="source lang-java linenums">package com.nikitchyn.homework3;
+
+<span class="nc" id="L3">public class VolumeBullet {</span>
+    public static void main(String[] args) {
+        //Задача 1. Порахувати вагу сніговика
+        //Початкові дані, радіуси куль(м),густина(m^3)
+        double r1, r2, r3, ro;
+<span class="nc" id="L8">        r1 = 1;</span>
+<span class="nc" id="L9">        r2 = 0.5F;</span>
+<span class="nc" id="L10">        r3 = 0.2F;</span>
+<span class="nc" id="L11">        ro = 0.7F;</span>
+        //Розрахуємо Об'ємы кожної кулі 4/3pr^3
+<span class="nc" id="L13">        double post = (4.0 / 3) * Math.PI; // постійне значення</span>
+        // Маса кулі = Густина * Об'єм
+<span class="nc" id="L15">        double result = ro * ((post * Math.pow(r1, 3)) + (post * Math.pow(r2, 3)) + (post * Math.pow(r3, 3)));</span>
+<span class="nc" id="L16">        System.out.printf(&quot;Cніговик важить: = %.4f кг. \n&quot;, result);</span>
+<span class="nc" id="L17">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
