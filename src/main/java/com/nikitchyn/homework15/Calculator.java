@@ -47,8 +47,7 @@ public class Calculator {
         } catch (NullPointerException e) {
             // якщо операція не
             // підтримується виведіть в консоль повідомлення через System.err.println
-            System.err.println("Операція не підримується " + e.getMessage());
-        }
+            System.err.println("Операція не підримується " + e.getMessage());        }
         // виключення, операція не підтримується
         throw new UnsupportedOperationException("Вказана операція: " + operation + " не підтримується");
     }
