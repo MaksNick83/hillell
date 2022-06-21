@@ -19,6 +19,6 @@ public enum Operation {
                 return op;
             }
         }
-        return null;
+        throw new UnsupportedOperationException("Вказана операція: " + action + " не підтримується");
     }
 }
