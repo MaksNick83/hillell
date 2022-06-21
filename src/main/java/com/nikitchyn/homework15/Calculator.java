@@ -1,7 +1,7 @@
 package com.nikitchyn.homework15;
 
 public class Calculator {
-    public Double calculate(double a, String operation, double b) throws UnsupportedOperationException {
+    public Double calculate(double a, String operation, double b) {
         try {
             Operation action = Operation.convert(operation);
 

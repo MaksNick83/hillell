@@ -13,7 +13,7 @@ public enum Operation {
 
     }
 
-    public static Operation convert(String action) {
+    public static Operation convert(String action) throws UnsupportedOperationException {
         for (Operation op : values()) {
             if (op.value.equals(action)) {
                 return op;
